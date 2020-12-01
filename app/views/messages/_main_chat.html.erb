@@ -12,38 +12,8 @@
 </div>
 
 <div class="messages">
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-        Gori
-      </div>
-      <div class="message-date">
-        2020/11/30(Mon) 14:32:00
-      </div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">
-      ウホウホ
-      </div>
-    </div>
-  </div>
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-        Goriko
-      </div>
-      <div class="message-date">
-        2020/11/30(Mon) 14:40:00
-      </div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">
-      ウホウホウホウホww
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
-
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
   <div class="form-input">
